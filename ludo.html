@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudo Ludo</title>
+    <link rel="stylesheet" href="./ludo.css">
+    <script src="./ludo.js" defer></script>
+
+</head>
+<body>
+
+    <!-- navigasjon -->
+    <nav class="navContainer" >
+
+        <p class="navText" >Sudo Ludo</p>
+        <button class="reglerBtn" id="reglerBtn" >Regler</button>
+        <button class="kastBtn" id="kastBtn" >Kast</button>
+        <p class="kastResultat" id="kastResultat" ></p>
+
+    </nav>
+
+    <!-- regler -->
+    <div class="reglerContainer" id="reglerContainer" >
+
+        <ol class="reglerList" >
+
+            <br>
+            <li>Kast 1 eller 6 for å flytte <br> brikken ut av start</li>
+            <br>
+            <li>Spiller havner på samme sted som en annen spiller, <br> slår ut den som allerede var der</li>
+
+        </ol>
+
+    </div>
+
+    <!-- velg karakter -->
+    <div class="charContainer" id="charContainer">
+
+        <h2>Her kan du velge karakteren din</h2>
+        <!-- alle de ulike logoene man skal spille som -->
+        <select class="selectLogo" id="selectLogo" >
+            <option value="none" id="none" ></option>
+            <option value="apple" id="apple" >Apple</option>
+            <option value="win" id="win" >Windows</option>
+            <option value="linux" id="linux" >Linux</option>
+            <option value="android" id="android" >Android</option>
+        </select>
+        
+        <button class="spillBtn" id="spillBtn" >Spill</button>
+        
+    </div>
+
+    <!-- slutt melding -->
+    <div class="endContainer" >
+
+        <p class="endText" >Gratulerer du vant</p>
+        <button class="endRestartBtn" id="endRestartBtn">Restart</button>
+
+    </div>
+
+    <!-- svg -->
+    <svg class="svgContainer" id="svgContainer" >
+
+        <!-- start Store blokker -->
+        <rect x="300" y="40" width="150" height="150" class="appleStartBig" ></rect>
+
+        <rect x="900" y="40" width="150" height="150" class="winStartBig" ></rect>
+
+        <rect x="970" y="300" width="150" height="150" class="linuxStartBig" ></rect>
+
+        <rect x="770" y="540" width="150" height="150" class="androidStartBig" ></rect>
+
+        <!-- start mini blokker -->
+
+        <!-- miderste blokk -->
+        <rect x="600" y="240" width="130" height="130" class="middleBig" ></rect>
+
+        <rect x="600" y="240" width="30" height="130" class="appleMiddle" ></rect>
+
+        <rect x="630" y="240" width="70" height="30" class="winMiddle" ></rect>
+
+        <rect x="700" y="240" width="30" height="130" class="linuxMiddle" ></rect>
+
+        <rect x="630" y="340" width="70" height="30" class="androidMiddle" ></rect>
+
+        <!-- spesiell ruter -->
+        <rect x="335" y="192" width="70" height="70" class="appleSpecialRoute" ></rect>
+
+        <rect x="335" y="262" width="70" height="70" class="appleSpecialRoute" ></rect>
+
+        <rect x="405" y="262" width="70" height="70" class="appleSpecialRoute" ></rect>
+
+        <rect x="475" y="262" width="70" height="70" class="appleSpecialRoute" ></rect>
+
+        <rect x="545" y="262" width="52" height="70" class="appleSpecialRoute" ></rect>
+
+
+        <rect x="828" y="100" width="70" height="70" class="winSpecialRoute" ></rect>
+
+        <rect x="758" y="100" width="70" height="70" class="winSpecialRoute" ></rect>
+
+        <rect x="708" y="100" width="50" height="70" class="winSpecialRoute" ></rect>
+
+        <rect x="630" y="100" width="79" height="70" class="winSpecialRoute" ></rect>
+
+        <rect x="630" y="170" width="70" height="68" class="winSpecialRoute" ></rect>
+
+
+        <rect x="900" y="356" width="70" height="68" class="linuxSpecialRoute" ></rect>
+
+        <rect x="828" y="356" width="72" height="68" class="linuxSpecialRoute" ></rect>
+
+        <rect x="784" y="340" width="45" height="84" class="linuxSpecialRoute" ></rect>
+
+        <rect x="783" y="272" width="45" height="68" class="linuxSpecialRoute" ></rect>
+
+        <rect x="732" y="272" width="52" height="68" class="linuxSpecialRoute" ></rect>
+
+
+        <rect x="698" y="550" width="70" height="68" class="androidSpecialRoute" ></rect>
+
+        <rect x="630" y="550" width="70" height="68" class="androidSpecialRoute" ></rect>
+
+        <rect x="630" y="495" width="70" height="54" class="androidSpecialRoute" ></rect>
+
+        <rect x="630" y="440" width="70" height="54" class="androidSpecialRoute" ></rect>
+
+        <rect x="630" y="372" width="70" height="68" class="androidSpecialRoute" ></rect>
+
+
+        <!-- rute blokker -->
+
+        <!-- fra apple til android -->
+        <rect x="405" y="192" width="70" height="70" class="ruteAppleWin" id="ruteAppleWin-1" ></rect>
+
+        <rect x="475" y="192" width="70" height="70" class="ruteAppleWin" id="ruteAppleWin-2" ></rect>
+
+        <rect x="475" y="124" width="70" height="68" class="ruteAppleWin" id="ruteAppleWin-3" ></rect>
+
+        <rect x="475" y="19" width="70" height="105" class="ruteAppleWin" id="ruteAppleWin-4" ></rect>
+
+        <rect x="545" y="19" width="70" height="68" class="ruteAppleWin" id="ruteAppleWin-5" ></rect>
+
+        <rect x="615" y="19" width="70" height="68" class="ruteAppleWin" id="ruteAppleWin-5" ></rect>
+
+        <rect x="685" y="19" width="70" height="68" class="ruteAppleWin" id="ruteAppleWin-5" ></rect>
+
+        <rect x="755" y="19" width="74" height="68" class="ruteAppleWin" id="ruteAppleWin-5" ></rect>
+
+        <rect x="828" y="19" width="70" height="81" class="ruteAppleWin" id="ruteAppleWin-5" ></rect>
+
+        <!-- fra windows til linux -->
+        <rect x="828" y="170" width="70" height="68" class="ruteWinLinux" id="ruteWinLinux-1" ></rect>
+
+        <rect x="828" y="237" width="72" height="52" class="ruteWinLinux" id="ruteWinLinux-2" ></rect>
+
+        <rect x="900" y="237" width="70 " height="52" class="ruteWinLinux" id="ruteWinLinux-3" ></rect>
+
+        <rect x="900" y="288" width="70" height="68" class="ruteWinLinux" id="ruteWinLinux-4" ></rect>
+
+        <!-- fra linux til android -->
+        <rect x="900" y="424" width="70" height="96" class="ruteLinuxAndroid" id="ruteLinuxAndroid-1" ></rect>
+
+        <rect x="830" y="452" width="70" height="68" class="ruteLinuxAndroid" id="ruteLinuxAndroid-2" ></rect>
+
+        <rect x="770" y="452" width="60" height="68" class="ruteLinuxAndroid" id="ruteLinuxAndroid-3" ></rect>
+        
+        <rect x="700" y="452" width="70" height="98" class="ruteLinuxAndroid" id="ruteLinuxAndroid-4" ></rect>
+
+        <rect x="700" y="618" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-1" ></rect>
+
+        <rect x="630" y="618" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-2" ></rect>
+
+        <rect x="560" y="618" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-3" ></rect>
+
+        <rect x="490" y="618" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-4" ></rect>
+
+        <rect x="420" y="618" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-5" ></rect>
+
+        <rect x="350" y="618" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-6" ></rect>
+
+        <rect x="265" y="618" width="85" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-7" ></rect>
+
+        <rect x="265" y="550" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-8" ></rect>
+
+        <rect x="265" y="482" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-9" ></rect>
+
+        <rect x="265" y="415" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-10" ></rect>
+
+        <rect x="265" y="348" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-11" ></rect>
+
+        <rect x="265" y="348" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-12" ></rect>
+
+        <rect x="265" y="260" width="70" height="89" class="ruteLinuxAndroid" id="ruteAndroidApple-12" ></rect>
+
+        <rect x="265" y="192" width="70" height="68" class="ruteLinuxAndroid" id="ruteAndroidApple-14" ></rect>
+
+
+        <!-- apple mini -->
+        <circle cx="340" cy="85" r="25" class="appleMini" id="appleMini-1" ></circle>
+
+        <circle cx="410" cy="85" r="25" class="appleMini" id="appleMini-2" ></circle>
+
+        <circle cx="340" cy="150" r="25" class="appleMini" id="appleMini-3" ></circle>
+
+        <circle cx="410" cy="150" r="25" class="appleMini" id="appleMini-4" ></circle>
+
+        <!-- windows mini -->
+        <circle cx="940" cy="85" r="25" class="winMini" id="winMini-1" ></circle>
+
+        <circle cx="1010" cy="85" r="25" class="winMini" id="winMini-2" ></circle>
+
+        <circle cx="940" cy="150" r="25" class="winMini" id="winMini-3" ></circle>
+
+        <circle cx="1010" cy="150" r="25" class="winMini" id="winMini-4" ></circle>
+
+        <!-- linux mini -->
+        <circle cx="1010" cy="345" r="25" class="linuxMini" id="linuxMini-1" ></circle>
+
+        <circle cx="1080" cy="345" r="25" class="linuxMini" id="linuxMini-2" ></circle>
+
+        <circle cx="1010" cy="410" r="25" class="linuxMini" id="linuxMini-3" ></circle>
+
+        <circle cx="1080" cy="410" r="25" class="linuxMini" id="linuxMini-4" ></circle>
+
+        <!-- android mini -->
+        <circle cx="810" cy="580" r="25" class="androidMini" id="androidMini-1" ></circle>
+
+        <circle cx="880" cy="580" r="25" class="androidMini" id="androidMini-2" ></circle>
+
+        <circle cx="810" cy="650" r="25" class="androidMini" id="androidMini-3" ></circle>
+
+        <circle cx="880" cy="650" r="25" class="androidMini" id="androidMini-4" ></circle>
+
+    </svg>
+    
+</body>
+</html>

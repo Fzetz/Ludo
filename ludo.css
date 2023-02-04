@@ -1,0 +1,345 @@
+/* styling av hele nettsiden med * */
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+/* styling av hele nettsiden med body */
+body {
+
+    background-color: #adf7b6;
+    font-family: Arial;
+
+}
+
+/* styling av nav */
+
+/* styling av navContainer */
+.navContainer {
+
+    display: grid;
+    background-color: #fcf6c7;
+    width: auto;
+    height: 100px;
+    grid-template-columns: 1fr 1fr 0px 70px;
+    align-items: center;
+
+}
+
+/* styling av navTekst */
+.navText {
+
+    font-size: 30px;
+    font-weight: 600;
+    order: 1;
+
+}
+
+/* styling av reglerBtn */
+.reglerBtn {
+
+    width: 70px;
+    height: 40px;
+
+}
+
+/* styling av knappen som kaster terningen */
+.kastBtn {
+
+    width: 70px;
+    height: 40px; 
+    order: 2;
+
+}
+
+/* styling av kastResultat */
+.kastResultat {
+
+    margin-top: 60px;
+    margin-left: 32px;
+    order: 3;
+
+}
+
+
+/* styling av regler */
+
+/* styling av reglerContainer */
+.reglerContainer {
+
+    display: none;
+    background-color: #444444;
+    width: 280px;
+    height: 200px;
+
+}
+
+/* styling av reglerListe */
+.reglerList {
+
+    color: white;
+    text-align: center;
+
+}
+
+
+/* styling av velgkarakter */
+
+/* styling av karakterContainer */
+.charContainer {
+
+    width: 400px;
+    height: 300px;
+    margin-left: 530px;
+    margin-top: 100px;
+    text-align: center;
+
+}
+
+/* styling av selectLogo */
+.selectLogo {
+
+    width: 150px;
+    height: 25px;
+    margin-top: 30px;
+
+}
+
+/* styling av spillKnappen */
+.spillBtn {
+
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
+
+}
+
+/* styling av sluttResultat */
+
+/* styling av sluttContaineren */
+.endContainer {
+
+    display: none;
+    background-color: #444444;
+    width: 500px;
+    height: 300px;
+    margin-left: 475px;
+    margin-top: -100px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+
+}
+
+/* styling av sluttTekst */
+.endText {
+
+    padding-top: 100px;
+
+}
+
+.endRestartBtn {
+
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+
+/* styling av svg */
+
+/* styling av svgContainer */
+.svgContainer {
+
+    display: none;
+    width: 100%;
+    height: 1000px;
+
+}
+
+
+/* styling av startBig blokker */
+
+/* styling av appleStartBig */
+.appleStartBig {
+
+    fill: #a0ced9;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av winStartBig */
+.winStartBig {
+
+    fill: #ffc09f;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av linuxStartBig */
+.linuxStartBig {
+
+    fill: #e0bbf4;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av androidStartBig */
+.androidStartBig {
+
+    fill: #fcf6c7;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* start mini blokker */
+.appleMini {
+
+    display: none;
+    fill: #878787;
+    stroke: black;
+    stroke-width: 3px;
+
+}
+
+.winMini {
+
+    display: none;
+    fill: #878787;
+    stroke: black;
+    stroke-width: 3px;
+
+}
+
+.linuxMini {
+
+    display: none;
+    fill: #878787;
+    stroke: black;
+    stroke-width: 3px;
+
+}
+
+
+.androidMini {
+
+    display: none;
+    fill: #878787;
+    stroke: black;
+    stroke-width: 3px;
+
+}
+
+/* styling av midersteBig blokker */
+
+/* stylng av middeBig */
+.middleBig {
+
+    stroke: black;
+    stroke-width: 10px;
+
+}
+
+/* styling av appleMiddle */
+.appleMiddle {
+
+    fill: #a0ced9;
+
+}
+
+/* styling av winMiddle */
+.winMiddle {
+
+    fill: #ffc09f;
+
+}
+
+/* styling av linuxMiddle */
+.linuxMiddle {
+
+    fill: #e0bbf4;
+
+}
+
+
+/* styling av androidMiddle */
+.androidMiddle {
+
+    fill: #fcf6c7;
+
+}
+
+
+/* styling av specialRute blokk */
+
+/* styling av appleSpecialRute blokker */
+.appleSpecialRoute {
+
+    fill: #a0ced9;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av winSpecialRute blokker */
+.winSpecialRoute {
+
+    fill: #ffc09f;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av linuxSpecialRute blokker */
+.linuxSpecialRoute {
+
+    fill: #e0bbf4;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av androidSpecialRute blokker */
+.androidSpecialRoute {
+
+    fill: #fcf6c7;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av rute blokker */
+
+/* styling av rute fra apple til windows */
+.ruteAppleWin {
+
+    fill: #878787;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av rute fra apple til windows */
+.ruteWinLinux {
+
+    fill: #878787;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+/* styling av rute fra linux til android */
+.ruteLinuxAndroid {
+
+    fill: #878787;
+    stroke: black;
+    stroke-width: 5px;
+
+}
